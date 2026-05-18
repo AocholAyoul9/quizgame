@@ -1,16 +1,16 @@
 
     // Base de données des questions bibliques
-    const QUIZ_SET = [
-        { question: "Qui a été jeté dans la fosse aux lions pour avoir prié Dieu ?", options: ["Jérémie", "Daniel", "Jonas", "David"], correct: "Daniel" },
-        { question: "Quel apôtre a renié Jésus trois fois avant que le coq chante ?", options: ["Pierre", "Jean", "Jacques", "André"], correct: "Pierre" },
-        { question: "Quel est le premier livre du Nouveau Testament ?", options: ["Genèse", "Psaumes", "Matthieu", "Apocalypse"], correct: "Matthieu" },
-        { question: "Qui était la mère de Jean le Baptiste ?", options: ["Élisabeth", "Marie", "Anne", "Ruth"], correct: "Élisabeth" },
-        { question: "Quel jeune homme est devenu roi d'Israël après David ?", options: ["Saül", "Salomon", "Absalom", "Josias"], correct: "Salomon" },
-        { question: "Jésus a dit : « Je suis le chemin, la vérité et la... »", options: ["lumière", "vie", "résurrection", "porte"], correct: "vie" },
-        { question: "Quel fruit Ève a-t-elle mangé de l'arbre défendu ?", options: ["Pomme", "Figue", "Raisin", "La Bible ne précise pas le fruit"], correct: "La Bible ne précise pas le fruit" },
-        { question: "Qui a conduit les Israélites en Terre Promise après Moïse ?", options: ["Caleb", "Josué", "Aaron", "Samuel"], correct: "Josué" },
-        { question: "Combien de livres y a-t-il dans l'Ancien Testament ?", options: ["27", "39", "66", "24"], correct: "39" },
-        { question: "Complète le verset : « Dieu a tant aimé le monde qu'il a donné... »", options: ["son Esprit", "sa Parole", "sa Grâce", "son Fils unique"], correct: "son Fils unique" }
+      const QUIZ_SET = [
+        { question: "Dans la parabole des talents (Matthieu 25), que représentent les talents ?", options: ["Des pièces d'argent confiées par un maître", "Des instruments de musique", "Des dons de chant et de danse", "Des tableaux précieux"], correct: "Des pièces d'argent confiées par un maître" },
+        { question: "Après la traversée de la mer Rouge, qui a dansé et chanté pour célébrer Dieu ?", options: ["Débora", "Marie (la sœur de Moïse)", "Anne", "Esther"], correct: "Marie (la sœur de Moïse)" },
+        { question: "Qui Dieu a-t-il rempli de son Esprit pour créer des œuvres d'art pour le Tabernacle ?", options: ["Moïse", "Aaron", "Bezalel", "Josué"], correct: "Bezalel" },
+        { question: "Quel talent Bézalel a-t-il reçu de Dieu ?", options: ["Le chant", "La danse", "L'art et l'habileté manuelle", "Le théâtre"], correct: "L'art et l'habileté manuelle" },
+        { question: "Qui dans la Bible est connu pour avoir dansé devant l'Arche de Dieu ?", options: ["David", "Salomon", "Josué", "Pierre"], correct: "David" },
+        { question: "Qui a utilisé son talent de couturière pour fabriquer des vêtements pour les veuves ?", options: ["Lydie", "Priscille", "Dorcas (Tabitha)", "Euodie"], correct: "Dorcas (Tabitha)" },
+        { question: "Selon 1 Corinthiens 12, qui donne les talents et les dons spirituels ?", options: ["Les apôtres", "Les anges", "Le même Esprit (Dieu)", "Les prophètes"], correct: "Le même Esprit (Dieu)" },
+        { question: "Que doit faire un serviteur fidèle avec ses talents selon Matthieu 25 ?", options: ["Les cacher", "Les utiliser et les faire fructifier", "Les donner aux pauvres", "Les détruire"], correct: "Les utiliser et les faire fructifier" },
+        { question: "Quel livre de la Bible est principalement un recueil de chants et de poèmes ?", options: ["Proverbes", "Psaumes", "Job", "Ecclésiaste"], correct: "Psaumes" },
+        { question: "Qui a joué de la harpe pour apaiser le roi Saül ?", options: ["David", "Asaph", "Héman", "Salomon"], correct: "David" }
     ];
 
     let currentQuestionsList = [];
