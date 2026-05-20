@@ -8,7 +8,9 @@ const QUIZ_SET = [
     { question: "Qui dans la Bible est connu pour avoir dansé devant l'Arche de Dieu ?", options: ["David", "Salomon", "Josué", "Pierre"], correct: "David" },
     { question: "Qui a utilisé son talent de couturière pour fabriquer des vêtements pour les veuves ?", options: ["Lydie", "Priscille", "Dorcas (Tabitha)", "Euodie"], correct: "Dorcas (Tabitha)" },
     { question: "Quel livre de la Bible est principalement un recueil de chants et de poèmes ?", options: ["Proverbes", "Psaumes", "Job", "Ecclésiaste"], correct: "Psaumes" }, { question: "Dans le Nouveau Testament, quelle foule a cru que les disciples étaient ivres à la Pentecôte ?", options: ["Parce qu'ils dansaient", "Parce qu'ils parlaient en différentes langues", "Parce qu'ils chantaient fort", "Parce qu'ils faisaient du théâtre"], correct: "Parce qu'ils parlaient en différentes langues" }, { question: "Quel livre de la Bible est principalement un recueil de chants et de poèmes ?", options: ["Proverbes", "Psaumes", "Job", "Ecclésiaste"], correct: "Psaumes" },
-    { question: "Qui a joué de la harpe pour apaiser le roi Saül ?", options: ["David", "Asaph", "Héman", "Salomon"], correct: "David" }
+    { question: "Qui a joué de la harpe pour apaiser le roi Saül ?", options: ["David", "Asaph", "Héman", "Salomon"], correct: "David" },
+    { question: "Quelle femme de la Bible était juge, prophétesse et composait des chants de guerre ?", options: ["Esther", "Ruth", "Débora", "Anne"], correct: "Débora" },
+    { question: "Dans le livre de Daniel, quel talent les trois jeunes hommes ont-ils montré dans la fournaise ?", options: ["Le chant", "La foi et la louange à Dieu", "La danse", "Le dessin"], correct: "La foi et la louange à Dieu" },
 ];
 
 let currentQuestionsList = [];
