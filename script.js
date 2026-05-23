@@ -1,18 +1,32 @@
 
 // Base de données des questions bibliques
 const QUIZ_SET = [
-    { question: "Quel personnage biblique a utilisé son talent de bâtisseur pour construire l'arche ?", options: ["Abraham", "Noé", "Salomon", "Moïse"], correct: "Noé" },
-    { question: "Après la traversée de la mer Rouge, qui a dansé et chanté pour célébrer Dieu ?", options: ["Débora", "Marie (la sœur de Moïse)", "Anne", "Esther"], correct: "Marie (la sœur de Moïse)" },
-    { question: "Qui Dieu a-t-il rempli de son Esprit pour créer des œuvres d'art pour le Tabernacle ?", options: ["Moïse", "Aaron", "Bezalel", "Josué"], correct: "Bezalel" },
-    { question: "Quel talent Bézalel a-t-il reçu de Dieu ?", options: ["Le chant", "La danse", "L'art et l'habileté manuelle", "Le théâtre"], correct: "L'art et l'habileté manuelle" },
-    { question: "Qui dans la Bible est connu pour avoir dansé devant l'Arche de Dieu ?", options: ["David", "Salomon", "Josué", "Pierre"], correct: "David" },
-    { question: "Qui a utilisé son talent de couturière pour fabriquer des vêtements pour les veuves ?", options: ["Lydie", "Priscille", "Dorcas (Tabitha)", "Euodie"], correct: "Dorcas (Tabitha)" },
-    { question: "Quel livre de la Bible est principalement un recueil de chants et de poèmes ?", options: ["Proverbes", "Psaumes", "Job", "Ecclésiaste"], correct: "Psaumes" }, { question: "Dans le Nouveau Testament, quelle foule a cru que les disciples étaient ivres à la Pentecôte ?", options: ["Parce qu'ils dansaient", "Parce qu'ils parlaient en différentes langues", "Parce qu'ils chantaient fort", "Parce qu'ils faisaient du théâtre"], correct: "Parce qu'ils parlaient en différentes langues" }, { question: "Quel livre de la Bible est principalement un recueil de chants et de poèmes ?", options: ["Proverbes", "Psaumes", "Job", "Ecclésiaste"], correct: "Psaumes" },
-    { question: "Qui a joué de la harpe pour apaiser le roi Saül ?", options: ["David", "Asaph", "Héman", "Salomon"], correct: "David" },
-    { question: "Quelle femme de la Bible était juge, prophétesse et composait des chants de guerre ?", options: ["Esther", "Ruth", "Débora", "Anne"], correct: "Débora" },
-    { question: "Dans le livre de Daniel, quel talent les trois jeunes hommes ont-ils montré dans la fournaise ?", options: ["Le chant", "La foi et la louange à Dieu", "La danse", "Le dessin"], correct: "La foi et la louange à Dieu" },
+    {
+        question: "Quel est le plus grand désert du monde ?",
+        options: ["Sahara", "Gobi", "Kalahari", "Arctique"],
+        correct: "Arctique"
+    },
+    {
+        question: "Quel est le plus grand océan du monde ?",
+        options: ["Océan Atlantique", "Océan Indien", "Océan Pacifique", "Océan Arctique"],
+        correct: "Océan Pacifique"
+    },
+    {
+        question: "Combien de continents existe-t-il sur Terre ?",
+        options: ["5", "6", "7", "8"],
+        correct: "7"
+    },
+    {
+        question: "Quel animal est connu comme le roi de la jungle ?",
+        options: ["Tigre", "Éléphant", "Lion", "Loup"],
+        correct: "Lion"
+    },
+    {
+        question: "Quelle planète est surnommée la planète rouge ?",
+        options: ["Vénus", "Mars", "Jupiter", "Saturne"],
+        correct: "Mars"
+    }
 ];
-
 let currentQuestionsList = [];
 let currentIndex = 0, userScore = 0, quizActive = true, selectedAnswer = false, currentQuestionObj = null;
 
@@ -46,15 +60,10 @@ function finishQuiz() {
     quizActive = false;
     selectedAnswer = true;
     optionsContainer.innerHTML = "";
-    questionTextEl.innerHTML = `<i class="fas fa-hallelujah" style="font-size: 2rem; display: block; margin-bottom: 10px;"></i> ALLÉLUIA !<br> Tu as terminé le Quiz Biblique FJU LYON !`;
+    questionTextEl.innerHTML = `<i class="fas fa-hallelujah" style="font-size: 2rem; display: block; margin-bottom: 10px;"></i><br> Tu as terminé le Quiz!`;
     const totalPossible = currentQuestionsList.length * 10;
-    feedbackMsgDiv.innerHTML = `<i class="fas fa-flag-checkered"></i> SCORE FINAL : ${userScore} / ${totalPossible} <i class="fas fa-flag-checkered"></i><br>📖 Continue à lire la Parole ! 📖`;
+    feedbackMsgDiv.innerHTML = `<i class="fas fa-flag-checkered"></i> SCORE FINAL : ${userScore} / ${totalPossible} <i class="fas fa-flag-checkered"></i>`;
     nextButton.disabled = true;
-    optionsContainer.innerHTML = `<div style="background:#eef3ff; border-radius: 48px; padding: 20px; text-align:center;">
-        <div style="font-size: 2rem;"><i class="fas fa-heart" style="color:#0c2f6c;"></i> <i class="fas fa-star" style="color:#d4a11e;"></i></div>
-        <strong>Merci FJU LYON !</strong><br><br>
-        <span style="font-size:0.9rem;"><i class="fas fa-bible"></i> « Ta parole est une lampe à mes pieds »<br>Psaume 119:105</span>
-        </div>`;
 }
 
 function renderCurrentQuestion() {
@@ -113,7 +122,7 @@ function handleAnswer(selectedOpt, targetBtn) {
         updateScoreUI();
         feedbackMsgDiv.innerHTML = "<i class='fas fa-check-circle' style='color:#2e7d32;'></i> BONNE RÉPONSE ! +10 points <i class='fas fa-smile-wink'></i>";
     } else {
-        feedbackMsgDiv.innerHTML = `<i class='fas fa-times-circle' style='color:#bc5a5a;'></i> Oups ! La bonne réponse était : "${correctAnswer}". Continue d'apprendre ! <i class='fas fa-grin-tongue-squint'></i>`;
+        feedbackMsgDiv.innerHTML = `<i class='fas fa-times-circle' style='color:#bc5a5a;'></i> Oups ! La bonne réponse était : "${correctAnswer}"<i class='fas fa-grin-tongue-squint'></i>`;
     }
 
     document.querySelectorAll(".opt-btn").forEach(btn => {
@@ -157,7 +166,6 @@ function resetGame() {
     quizActive = true;
     updateScoreUI();
     nextButton.disabled = true;
-    feedbackMsgDiv.innerHTML = "<i class='fas fa-heart' style='color:#0c2f6c;'></i> Nouveau départ ! Que Dieu bénisse ta connaissance ! <i class='fas fa-heart' style='color:#0c2f6c;'></i>";
     renderCurrentQuestion();
 }
 
